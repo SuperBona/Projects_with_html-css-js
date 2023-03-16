@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery bud</title>
+    <link rel="stylesheet" href="../starter/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="../starter/fontawesome-free-5.12.1-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="section-center">
+      <!-- form -->
+      <form action="" class="grocery-form">
+        <div class="alert alert-danger">please enter value</div>
+        <h4>grocery bud</h4>
+        <div class="form-row">
+          <input type="text" class="form-input" placeholder="e.g. eggs" />
+          <button type="submit" class="btn submit-btn text-small">
+            submit
+          </button>
+        </div>
+      </form>
+      <!-- list -->
+      <div class="grocery-container">
+        <!-- list items -->
+        <div class="grocery-list">
+          <!-- grocery item -->
+          <article class="grocery-item">
+            <span class="title">apples</span>
+            <div class="btn-container">
+              <!-- edit btn -->
+              <button type="button" class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </button>
+              <!-- delete btn -->
+              <button type="button" class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </article>
+          <!-- grocery item -->
+          <article class="grocery-item">
+            <span class="title">oranges</span>
+            <div class="btn-container">
+              <!-- edit btn -->
+              <button type="button" class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </button>
+              <!-- delete btn -->
+              <button type="button" class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+        <!-- clear btn -->
+        <button type="button" class="clear-btn text-small">clear items</button>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="../starter/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="../starter/fontawesome-free-5.12.1-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section class="menu">
+      <!-- title -->
+      <div class="title">
+        <h2>our menu</h2>
+        <div class="title-underline"></div>
+      </div>
+      <!-- filter buttons -->
+      <div class="btn-container">
+        <button type="button" class="btn filter-btn" data-id="all">all</button>
+        <button type="button" class="btn filter-btn" data-id="breakfast">
+          breakfast
+        </button>
+        <button type="button" class="btn filter-btn" data-id="lunch">
+          lunch
+        </button>
+        <button type="button" class="btn filter-btn" data-id="shakes">
+          shakes
+        </button>
+      </div>
+      <!-- end of filter buttons -->
+      <div class="section-center">
+        <!-- SINGLE ITEM -->
+        <article class="menu-item">
+          <img
+            src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            class="img photo"
+            alt="pancakes"
+          />
+          <div class="item-info">
+            <header>
+              <h5>buttermilk pancakes</h5>
+              <span class="price">$5</span>
+            </header>
+            <p class="item-text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
+              qui ipsum amet nisi id eum aut odio corrupti sit magni.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+:root {
+  /* colors */
+  --primary-100: #e0deff;
+  --primary-200: #c1beff;
+  --primary-300: #a29dff;
+  --primary-400: #837dff;
+  --primary-500: #645cff;
+  --primary-600: #504acc;
+  --primary-700: #3c3799;
+  --primary-800: #282566;
+  --primary-900: #141233;
+  /* grey */
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+  /* other colors */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+  /* fonts */
+  --headingFont: "Spectral", sans-serif;
+  --bodyFont: "Karla", sans-serif;
+  --smallText: 0.7em;
+  /* all other vars */
+  --backgroundColor: var(--grey-50);
+  --textColor: var(--grey-900);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: 0.3s linear all;
+  /*oppure scrivo così ->  --transition: all 0.3s linear; */
+  --max-width: 1120px;
+  --fixed-width: 600px;
+  /* box shadows */
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.6);
+  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  background: var(--backgroundColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--textColor);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 40em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1.38rem;
+  font-family: var(--headingFont);
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text-small {
+  font-size: var(--smallText);
+}
+
+/* siti per i colori: coolors / happyhues / fontpair / bootstrap */
+
+/* sito per comparare fonts -> fontpair / pagecloud / type-scale */
+
+/* sito per sfumature colore -> shadowlord - noeldelgado */
+
+/* sito per ombre -> tailwindcss - box shadow */
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* 
+=============
+Navbar
+=============
+*/
+nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
+}
+
+/* 
+============
+Navbar
+============
+*/
+nav {
+  background: var(--white);
+  box-shadow: var(--shadow-2);
+  line-height: 1;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--primary-500);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  transform: rotate(90deg);
+}
+
+.logo {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--primary-500);
+}
+
+/* ricordo, sto lavorando su schermo piccolo, qui le voglio nascondere le icone */
+.social-icons {
+  display: none;
+}
+
+/* prima lavoro con il singolo item, poi tutta la lista */
+.links a {
+  color: var(--grey-700);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+  display: block;
+  /* perchè di default i link sono inline */
+  padding: 0.75rem 1rem;
+  transition: var(--transition);
+}
+
+.links a:hover {
+  background: var(--primary-300);
+  color: var(--primary-500);
+  padding-left: 1.5rem;
+}
+
+.links {
+  margin: 0;
+  /* todo height overflow transition */
+  /* per settare la funzionalità toggle, devo anche prendere l'height dei link */
+  /* dev. tools, punto l'item per vedere le dimensioni. per tutta la lista è 160px, per il singolo item è 40px */
+  /* 160px equivale a 10rem */
+  /* voglio impostare la lista a height=0 di default, cioè nascosta */
+  height: 0;
+  overflow: hidden;
+  /* e per mostrarli devo attivare la funzione e ricordarmi l'height originale */
+  transition: var(--transition);
+}
+
+/* todo .show-links */
+.show-links {
+  /* inserisco l'height originale, 160px */
+  height: 10rem;
+  /* devo lanciare manualmente questa classe, serve js */
+}
+
+/* schermi grandi */
+@media screen and (min-width: 800px) {
+  .nav-toggle {
+    /* nascondo il toggle btn */
+    display: none;
+  }
+  .nav-center {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .links {
+    height: auto;
+    display: flex;
+    /* todo height */
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--primary-500);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--primary-300);
+  }
+}
